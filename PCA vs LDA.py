@@ -8,7 +8,7 @@ Created on Tue Dec 12 13:15:42 2017
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-#Question 1
+
 data=np.genfromtxt("C:/Users/vikhy/Desktop/dataset_1.csv",dtype='float',skip_header=1,delimiter=',')
 v=np.column_stack((data[:,0],data[:,1]))
 overall_mean = np.mean(v, axis=0)
