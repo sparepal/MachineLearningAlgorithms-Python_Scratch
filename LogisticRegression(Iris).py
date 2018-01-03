@@ -46,11 +46,11 @@ counter=0
 test_dataset=[]
 print("Training dataset")
 for i in range(100):
-    total_cost=0        
-                                                          #Leave-one out cross validation
-    test_d,train_data=split(dataset,i)
-    test_dataset.append(test_d)
-    counter+=1
+    total_cost=0     
+    if i==counter                                                      #Leave-one out cross validation
+        test_d,train_data=split(dataset,i)
+        test_dataset.append(test_d)
+        counter+=1
 #Calculating H_theta(x)
     for j in range(99):                                      #Has only 99 flowers leaving one for testing
         
